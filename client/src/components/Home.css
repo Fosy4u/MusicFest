@@ -1,0 +1,42 @@
+.home {
+  padding: 30px;
+  width: 100%;
+  height: 100vh;
+  overflow-y: overlay;
+  flex: 0.8;
+  color: white;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 1));
+  background-color: #1a1a1a;
+  display: flex;
+  flex-direction: column;
+}
+
+.home::-webkit-scrollbar {
+  display: none;
+}
+.body::-webkit-scrollbar {
+  display: none;
+}
+
+.home__header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.home__arrow {
+  border-radius: 50%;
+  background-color: black;
+  cursor: pointer;
+  margin: 4px;
+  align-items: center;
+  text-align: center;
+  padding: 4px;
+}
+.home__toplist__items {
+  display: flex;
+  flex-wrap: wrap;
+}
+.home__toplist__featured {
+  display: flex;
+  flex-wrap: wrap;
+}
