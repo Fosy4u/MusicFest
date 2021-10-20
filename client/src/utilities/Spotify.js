@@ -12,7 +12,9 @@ const scopes = [
     'streaming',
     'user-library-read',
     'user-library-modify',
-    'user-read-email'
+    'user-read-email',
+    'user-read-playback-state',
+    'user-read-private'
 
 ]
 
@@ -24,4 +26,4 @@ export const getTokenFromUrl = () =>{
 },{});
 }
 
-export const loginUrl = `${authEndpoint}?client_id=${clientId}&redirect_uri=${rediectUri}&scope=${scopes.join("%20")}&response_type=token&show_dialog=true`
+export const loginUrl = `${authEndpoint}?client_id=${clientId}&redirect_uri=${rediectUri}&scope=${scopes.join("%20")}&response_type=code&show_dialog=true`

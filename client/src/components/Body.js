@@ -10,6 +10,20 @@ import SongRow from './SongRow';
 export default function Body({spotify}) {
 const [{active_playlist}, dispatch] = useStateValue()
 
+function handle__play__circle__click(){
+    if(active_playlist){
+        dispatch({
+            type : 'SET_TRACK',
+            payload: active_playlist.tracks.items[0].track
+        
+          });
+          dispatch({
+            type : 'SET_PLAY',
+            payload: true
+        
+          })
+    }
+}
 
     return (
         <div className='body'>
@@ -27,7 +41,10 @@ const [{active_playlist}, dispatch] = useStateValue()
              </div>
              <div className="body__songs">
                  <div className="body__icons">
+                     <span onClick={handle__play__circle__click}>
                      <PlayCircleFilledIcon className= 'body__shuffle'/>
+                     </span>
+                     
                      <FavoriteIcon fontSize='large'/>
                      <MoreHorizIcon/>
 

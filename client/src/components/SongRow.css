@@ -12,21 +12,23 @@
   opacity: 0.8;
 }
 
-.songRow__info{
-    margin-left: 20px;
+.songRow:focus {
+  background-color: yellowgreen;
+}
+.songRow__info {
+  margin-left: 20px;
 }
 
-.songRow__info >h1{
-    font-size: 16px;
+.songRow__info > h1 {
+  font-size: 16px;
 }
-.songRow__info>p{
-    font-size: 14px;
-    margin-top: 3px;
-    color: gray;
+.songRow__info > p {
+  font-size: 14px;
+  margin-top: 3px;
+  color: gray;
 }
 
 .songRow__album {
-    height: 40px;
-    width: 40px;
-    
+  height: 40px;
+  width: 40px;
 }

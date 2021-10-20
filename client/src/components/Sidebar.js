@@ -21,7 +21,7 @@ useEffect(() => {
     }
   
     
-}, [playlists])
+}, [playlists,token])
 const get_playlist_id = (playlist_id) =>{
     if(playlists){
         
@@ -42,7 +42,7 @@ const get_playlist_id = (playlist_id) =>{
         <div className= 'sidebar'>
             <img  className = 'sidebar_logo'src={logo} alt='sidebar logo'/>
             <Link  className='link' to={"/"}> <SidebarOption title = 'Home' Icon = {HomeIcon}/></Link>
-            <SidebarOption title = 'Search' Icon = {SearchIcon}/>
+            <Link className='link' to={"/search"}><SidebarOption title = 'Search' Icon = {SearchIcon}/></Link>
             <SidebarOption title = 'Your Library' Icon = {LibraryMusicIcon}/>
             <br/>
 

@@ -1,0 +1,13 @@
+.player_body {
+  display: flex;
+}
+
+.footer {
+  display: flex;
+
+  position: fixed;
+  bottom: 0;
+  height: 65px;
+  width: 100%;
+  
+}

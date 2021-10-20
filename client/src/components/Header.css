@@ -6,9 +6,7 @@
 .header__left {
   flex: 0.6;
   min-width: 70px;
-  background-color: white;
-  color: gray;
-  border-radius: 30px;
+
   display: flex;
   align-items: center;
   padding: 10px;

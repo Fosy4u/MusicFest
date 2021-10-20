@@ -21,10 +21,8 @@ export default function Home() {
 
     useEffect(() => {
         if(token){
-        spotify.setAccessToken(token);  
-        
-        }
-//setting spotify Top-Hit Playlist
+        spotify.setAccessToken(token); 
+        //setting spotify Top-Hit Playlist
         spotify.getCategoryPlaylists('toplists').then((res) => {
             setTophit(res)
           }) 
@@ -47,10 +45,14 @@ export default function Home() {
           spotify.getPlaylist('37i9dQZF1EuRLv0ysK23m1').then((res) => {
           setYourtimecapsule(res)
             
-          })
+          }) 
+          spotify.getMyCurrentPlaybackState().then(res =>{console.log('name',res.name)})
+        
+        }
+
       
         
-    }, [])
+    }, [token])
 
     const get_playlist_id = (playlist_id) =>{
     if(token){
@@ -64,6 +66,7 @@ export default function Home() {
             
             history.push(`/body/${playlist_id}`)
           })
+          
         
     }
      
@@ -84,7 +87,7 @@ export default function Home() {
 </div>
 
             </div>
-            <div className="home__body">
+            {user?( <div className="home__body">
                 <div className="home__toplist">
                     <span>
                     <h2> Super Playlists Made For You</h2>
@@ -110,7 +113,8 @@ export default function Home() {
                 
                 </div>
                 
-            </div>
+            </div>): <h2>Loading.....</h2>}
+           
         </div>
     )
 }
