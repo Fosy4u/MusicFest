@@ -1,0 +1,81 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway+Dots);
+
+.lyrics {
+  padding: 30px;
+  width: 100%;
+  height: 100vh;
+  overflow-y: overlay;
+  flex: 0.8;
+  color: white;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 1));
+  background-color: rgb(91, 87, 115);
+  display: flex;
+  flex-direction: column;
+}
+
+.lyrics__header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.lyrics__arrow {
+  border-radius: 50%;
+  background-color: black;
+  cursor: pointer;
+  margin: 4px;
+  align-items: center;
+  text-align: center;
+  padding: 4px;
+}
+
+.lyrics__text {
+  text-align: center;
+  width: 50%;
+  color: white;
+  white-space: pre;
+  height: 300px;
+  position: relative;
+  padding: 20px;
+  font-size: 20px;
+
+  overflow: -webkit-marquee;
+  -webkit-marquee: up infinite slide;
+  -webkit-marquee-speed: 280;
+  font-family: "Verdana";
+  font-weight: normal;
+}
+
+.lyrics__name {
+  color: green;
+  width: 50%;
+  height: 40px;
+  padding: 20px;
+  font-size: 25px;
+  font-weight: bold;
+  font-family: "Raleway Dots", cursive;
+  text-transform: uppercase;
+  text-align: center;
+
+  overflow: -webkit-marquee;
+}
+.lyrics__body {
+  display: flex;
+}
+
+.no__lyrics__body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+}
+
+.no__lyrics__logo {
+  width: 90%;
+  height: 90%;
+}
+
+.lyrics__logo {
+  width: 85%;
+  align-self: center;
+  padding-top: 20%;
+}

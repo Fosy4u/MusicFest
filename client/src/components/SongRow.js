@@ -2,18 +2,21 @@ import React,{useState, useEffect} from 'react';
 import './SongRow.css';
 import { useStateValue } from '../utilities/StateProvider';
 
-export default function SongRow({track='test'}) {
+export default function SongRow({track='test', next ='test + 1'}) {
     const [{user,token}, dispatch] = useStateValue();
 
 
+
+
 function handle__track__click() {
+    
     if(track){
         dispatch({
             type : 'SET_TRACK',
             payload: track
         
           });
-
+          
           dispatch({
             type : 'SET_PLAY',
             payload: true

@@ -11,6 +11,7 @@ import { useStateValue } from '../utilities/StateProvider';
 import Search from './Search';
 import { useHistory } from "react-router-dom"
 import Player from './Player';
+import Lyrics from './Lyrics';
 
 
 const spotify = new SpotifyWebApi({
@@ -68,6 +69,7 @@ export default function AppLaunch({code, spotify}) {
         <Route exact={true} path="/" component={Home} />
         <Route path="/body" component={() => <Body spotify = {spotify}/>} />
         <Route path="/search" component={Search} />
+        <Route path="/lyrics" component={Lyrics} />
                     
          
             </div>

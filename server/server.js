@@ -2,10 +2,12 @@ const express = require('express');
 const spotify__web__api = require('spotify-web-api-node');
 const cors = require('cors')
 const bodyParser = require('body-parser')
+const lyrics__finder = require('lyrics-finder')
 
 const app = express();
 app.use(cors())
 app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({extended: true}))
 
 app.post('/login', (req, res) => {
     const code = req.body.code
@@ -45,6 +47,11 @@ app.post('/refresh', (req, res) => {
     }).catch(() => {
         'The access token cannot be refreshed'
     })
+})
+
+app.get('/lyrics', async (req, res) => {
+const lyrics = await lyrics__finder(req.query.artist, req.query.track) || 'No Lyrics found'
+res.json({lyrics})
 })
 
 

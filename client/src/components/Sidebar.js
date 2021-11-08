@@ -15,6 +15,7 @@ export default function Sidebar() {
 const [{playlists,token,featured_playlists}, dispatch ] = useStateValue()
 const [id, setid] =  useState()
 
+
 useEffect(() => {
     if(token){
     spotify.setAccessToken(token);   
